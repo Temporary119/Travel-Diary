@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=, initial-scale=1.0">
+  <title>project</title>
+  <link rel="stylesheet" href="TravelDiary.css">
+</head>
+<body>
+  <nav>
+        <div class="logo">Travel Diary</div>
+        <ul class="nav-links">
+            <li><a href="#" onclick="navigateTo('landing')">Home</a></li>
+            <li><a href="#" onclick="navigateTo('about')">About</a></li>
+            <li><a href="#" onclick="navigateTo('contact')">Contact</a></li>
+            <li><a href="#" onclick="navigateTo('login')">Login</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Landing Page -->
+        <div id="landing" class="page visible">
+            <div class="one">
+                <div class="left-text">
+                    <h1>Capture<br>Memories</h1>
+                    <br>
+                    <p>Discover the beauty of travel through snapshots...</p>
+                    <button onclick="showFormOnly()">CREATE</button>
+                </div>
+                <div class="fslider-section">
+                    <div class="fcarousel-container">
+                        <!-- Cards -->
+                        <div class="fcard factive">
+                            <img src="inn1.png" />
+                        </div>
+                        <div class="fcard factive">
+                            <img src="inn2.png" />
+                        </div>
+                        <div class="fcard factive">
+                            <img src="inn3.png" />
+                        </div>
+                        <div class="fcard factive">
+                            <img src="inn4.png" />
+                        </div>
+                        
+                    </div>
+                    <div class="fcontrols">
+                        <button onclick="slideFront(-1)">&lt;</button>
+                        <button onclick="slideFront(1)">&gt;</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- About Page -->
+        <div id="about" class="page">
+            <div class="container">
+                <div class="box">
+                    <div class="nav-btn" onclick="navigateTo('landing')">← Back to Home</div>
+                    <div class="about-content">
+                        <h2>About Travel Diary</h2>
+                        <div class="about-text">
+                            <p>Welcome to Travel Diary - your personal companion for capturing and preserving life's most precious travel moments. Our platform is designed to help you create a beautiful digital scrapbook of your adventures around the world.</p>
+                            
+                            <h3>What We Offer</h3>
+                            <p>Travel Diary provides you with an intuitive and elegant way to document your journeys. Whether you're exploring bustling cities, serene beaches, or hidden mountain trails, our platform helps you capture every detail that makes your trip special.</p>
+                            
+                            <h3>Features</h3>
+                            <p><strong>Visual Storytelling:</strong> Upload multiple photos from your travels and organize them in beautiful galleries that tell your story.</p>
+                            
+                            <p><strong>Memory Management:</strong> Create detailed entries with titles, destinations, dates, descriptions, and memorable quotes that capture the essence of your experience.</p>
+                            
+                            <p><strong>Easy Organization:</strong> Tag your memories and organize them by destination, date, or theme for easy browsing.</p>
+                            
+                            <p><strong>Beautiful Display:</strong> View your memories in an elegant, responsive interface that works perfectly on all devices.</p>
+                            
+                            <h3>Our Mission</h3>
+                            <p>We believe that travel memories are treasures that deserve to be preserved beautifully. Our mission is to provide travelers with a simple yet powerful tool to create lasting digital keepsakes of their adventures.</p>
+                            
+                            <p>Start your journey with us today and never let a precious travel memory fade away!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Page -->
+        <div id="contact" class="page">
+            <div class="container">
+                <div class="box">
+                    <div class="nav-btn" onclick="navigateTo('landing')">← Back to Home</div>
+                    <div class="contact-content">
+                        <h2>Contact Us</h2>
+                        <div class="contact-info">
+                            <p>We'd love to hear from you! Whether you have questions, feedback, or suggestions, feel free to reach out to us.</p>
+                            
+                            <div class="contact-details">
+                                <div class="contact-item">
+                                    <h3>📧 Email</h3>
+                                    <p>support@traveldiary.com</p>
+                                    <p>hello@traveldiary.com</p>
+                                </div>
+                                
+                                <div class="contact-item">
+                                    <h3>📞 Phone</h3>
+                                    <p>+1 (xxx) xxx-xxxx</p>
+                                    <p>Available Mon-Fri, 9AM-6PM EST</p>
+                                </div>
+                                
+                                <div class="contact-item">
+                                    <h3>📍 Address</h3>
+                                    <p>123 Travel Street<br>
+                                    Adventure City, AC 12345<br>
+                                    United States</p>
+                                </div>
+                                
+                                <div class="contact-item">
+                                    <h3>🌐 Social Media</h3>
+                                    <p>Follow us on:</p>
+                                    <p>Instagram: @traveldiary<br>
+                                    Twitter: @travel_diary<br>
+                                    Facebook: Travel Diary Official</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-form">
+                                <h3>Send us a Message</h3>
+                                <form id="contactForm">
+                                    <input type="text" placeholder="Your Name" required>
+                                    <input type="email" placeholder="Your Email" required>
+                                    <input type="text" placeholder="Subject" required>
+                                    <textarea rows="5" placeholder="Your Message" required></textarea>
+                                    <button type="submit">Send Message</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Login Page -->
+        <div id="login" class="page">
+            <div class="container">
+                <div class="box">
+                    <div class="nav-btn" onclick="navigateTo('landing')">← Back to Home</div>
+                    <div class="login-content">
+                        <h2>Welcome Back</h2>
+                        <div class="login-form">
+                            <form id="loginForm">
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" placeholder="Enter your email" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="password">Password</label>
+                                    <input type="password" id="password" placeholder="Enter your password" required>
+                                </div>
+                                
+                                <div class="form-options">
+                                    <label class="checkbox-container">
+                                        <input type="checkbox" id="remember">
+                                        <span class="checkmark"></span>
+                                        Remember me
+                                    </label>
+                                    <a href="#" class="forgot-password">Forgot Password?</a>
+                                </div>
+                                
+                                <button type="submit" class="login-btn">Login</button>
+                            </form>
+                            
+                            <div class="signup-link">
+                                <p>Don't have an account? <a href="#" onclick="navigateTo('sign')">Sign up here</a></p>
+                            </div>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Memory Management Page -->
+        <div id="aboutp" class="page">
+            <div class="container">
+                <!-- Memory List Section -->
+                <div class="box hidden" id="memoryListSection">
+                    <h2>Your Memories</h2>
+                    <div id="mbtn">
+                        <div class="top-btn" onclick="navigateTo('landing')">← Home</div>
+                        <div class="top-btn" onclick="startNewMemory()">+ Create New Memory</div>
+                    </div>
+                    <div class="memory-list" id="memoryList"></div>
+                </div>
+
+                <!-- Detailed View Section -->
+                <div class="box hidden" id="viewerSection">
+                    <div class="viewer-controls">
+                        <div class="top-btn" onclick="goBackToList()">← Back to Memories</div>
+                        <div class="top-btn delete-btn" onclick="deleteCurrentMemory()" id="deleteBtn">🗑️ Delete Memory</div>
+                    </div>
+                    <div class="hello">
+                        <div class="carousel-wrapper">
+                            <button class="arrow-btn left" onclick="slide(-1)">&lt;</button>
+                            <div class="carousel" id="vCarousel"></div>
+                            <button class="arrow-btn right" onclick="slide(1)">&gt;</button>
+                        </div>
+                        <div class="memory-detail">
+                            <h2>Your Travel Memory</h2>
+                            <p><strong>Title:</strong> <span id="vTitle"></span></p>
+                            <p><strong>Destination:</strong> <span id="vDestination"></span></p>
+                            <p><strong>Date:</strong> <span id="vDate"></span></p>
+                            <p><strong>Description:</strong><br><span id="vDescription"></span></p>
+                            <p><strong>Quote:</strong> <span id="vQuote"></span></p>
+                            <p><strong>Tags:</strong> <span id="vTags"></span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Section -->
+                <div class="box hidden" id="formSection">
+                    <h2>Create Travel Memory</h2>
+                    <form id="memoryForm">
+                        <label for="title">Title</label>
+                        <input name="title" placeholder="Title" required />
+
+                        <label for="destination">Destination</label>
+                        <input name="destination" placeholder="Destination" required />
+
+                        <label for="date">Date</label>
+                        <input name="date" type="date" required />
+
+                        <label for="description">Description</label>
+                        <textarea name="description" rows="3" placeholder="Description"></textarea>
+
+                        <label for="quote">Quote</label>
+                        <input name="quote" placeholder="Memorable Quote" />
+
+                        <label for="tags">Tags</label>
+                        <input name="tags" placeholder="Tags" />
+
+                        <label for="imageInput">Images</label>
+                        <input type="file" id="imageInput" multiple accept="image/*" />
+                        <div id="previewContainer"></div>
+
+                        <div class="form-buttons">
+                            <button type="button" onclick="navigateTo('landing')">← Home</button>
+                            <button type="submit">Save Memory</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="TravelDiary.js"></script>
+</body>
+</html>
